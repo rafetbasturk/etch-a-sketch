@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/etch-a-sketch/css/main.css">
+  <title>Etch-a-sketch</title>
+</head>
+
+<body>
+  <header class="header">Etch-a-sketch</header>
+  <main class="main">
+    <p class="main__description">Hover on a grid to paint. Click on the grid to remove the color.</p>
+
+    <div class="main__controls">
+      <button type="button" aria-label="set size">Set Size</button>
+      <button type="button" class="active" aria-label="set color">Set Color</button>
+      <button type="button" aria-label="set random color">Random Color</button>
+      <!-- <button type="button" aria-label="set color 10% black">10% Black</button> -->
+      <button type="button" aria-label="clear grid">Clear Grid</button>
+    </div>
+
+    <div class="main__grid"></div>
+  </main>
+
+  <div class="popup">
+    <div class="popup__message">
+      <span class="popup__close material-icons">close</span>
+      <form class="popup__formSize">
+        <p class="popup__description">Set cell number (2-50)</p>
+        <div class="popup__size">
+          <label for="size">Grid Size</label>
+          <input type="range" name="size" id="size" aria-label="select size" value="10" min="2" max="50">
+          <span class="popup__grid-value"></span>
+        </div>
+        <button type="submit" name="submitCell" aria-label="apply change">Apply Change</button>
+      </form>
+      <form class="popup__formColor">
+        <p class="popup__description">Set a color</p>
+        <div class="popup__color">
+          <label for="color">Color</label>
+          <input type="color" name="color" id="color" aria-label="select color" value="#000000">
+          <span class="popup__color-value"></span>
+        </div>
+        <button type="submit" name="submitColor" aria-label="apply change">Apply Change</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
